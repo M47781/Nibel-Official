@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nibel Official</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+background:#000;
+color:#fff;
+overflow-x:hidden;
+position:relative;
+min-height:100vh;
+}
+
+/* VIDEO BACKGROUND */
+#bg-video{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+object-position:center center;
+z-index:-2;
+}
+
+/* DARK OVERLAY */
+body::after{
+content:"";
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.55);
+backdrop-filter:blur(2px);
+z-index:-1;
+}
+
+/* CONTAINER */
+.container{
+max-width:450px;
+width:92%;
+margin:40px auto;
+padding:25px;
+text-align:center;
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.15);
+backdrop-filter:blur(15px);
+-webkit-backdrop-filter:blur(15px);
+border-radius:25px;
+box-shadow:0 0 40px rgba(255,255,255,.08);
+}
+
+/* LOGO */
+.logo{
+width:130px;
+height:130px;
+border-radius:50%;
+object-fit:cover;
+border:2px solid #fff;
+animation:float 4s ease-in-out infinite;
+transition:.3s;
+}
+
+.logo:hover{
+transform:scale(1.05);
+box-shadow:0 0 30px rgba(255,255,255,.8);
+}
+
+@keyframes float{
+0%{transform:translateY(0)}
+50%{transform:translateY(-10px)}
+100%{transform:translateY(0)}
+}
+
+/* TITLE */
+h1{
+margin-top:15px;
+font-size:30px;
+letter-spacing:2px;
+}
+
+.bio{
+margin-top:8px;
+font-size:14px;
+color:#ddd;
+}
+
+/* GALLERY */
+.gallery{
+overflow:hidden;
+margin:25px 0;
+border-radius:15px;
+}
+
+.track{
+display:flex;
+gap:15px;
+width:max-content;
+animation:scroll 18s linear infinite;
+}
+
+.gallery img{
+width:180px;
+height:240px;
+object-fit:cover;
+border-radius:15px;
+border:1px solid rgba(255,255,255,.2);
+transition:.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.08);
+box-shadow:0 0 25px rgba(255,255,255,.4);
+}
+
+@keyframes scroll{
+0%{transform:translateX(0)}
+100%{transform:translateX(-50%)}
+}
+
+/* BUTTONS */
+.btn{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+padding:15px;
+margin:12px 0;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+background:#fff;
+color:#000;
+transition:.3s;
+}
+
+.btn:hover{
+background:#000;
+color:#fff;
+border:1px solid #fff;
+transform:translateY(-3px);
+box-shadow:0 0 25px rgba(255,255,255,.6);
+}
+
+.whatsapp{
+background:#25D366;
+color:#fff;
+}
+
+.whatsapp:hover{
+box-shadow:0 0 20px #25D366;
+}
+
+/* FOOTER */
+.footer{
+margin-top:20px;
+font-size:12px;
+color:#aaa;
+}
+
+/* SCROLL REVEAL */
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:.8s;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+.container{
+width:95%;
+padding:20px;
+margin:20px auto;
+}
+
+.logo{
+width:100px;
+height:100px;
+}
+
+h1{
+font-size:24px;
+}
+
+.bio{
+font-size:13px;
+}
+
+.gallery img{
+width:130px;
+height:180px;
+}
+
+.btn{
+font-size:14px;
+padding:13px;
+}
+}
+
+@media(max-width:480px){
+
+.logo{
+width:90px;
+height:90px;
+}
+
+h1{
+font-size:20px;
+}
+
+.gallery img{
+width:110px;
+height:150px;
+}
+
+.bio{
+font-size:12px;
+}
+
+.btn{
+font-size:13px;
+}
+}
+
+</style>
+</head>
+<body>
+
+<!-- VIDEO BACKGROUND -->
+<video autoplay muted loop playsinline id="bg-video">
+<source src="./video.mp4.mp4" type="video/mp4">
+</video>
+
+<div class="container">
+
+<div class="reveal">
+<img class="logo" src="https://res.cloudinary.com/dtdklgoij/image/upload/v1781525876/5873186886142401714_vmfltd.webp">
+</div>
+
+<div class="reveal">
+<h1>Nibel Official</h1>
+<p class="bio">Luxury Content Creator • Lifestyle • Digital Brand</p>
+</div>
+
+<div class="gallery reveal">
+<div class="track">
+
+<img src="https://res.cloudinary.com/dtdklgoij/image/upload/v1781525845/5873186886602395568_kplfda.jpg">
+<img src="https://res.cloudinary.com/dtdklgoij/image/upload/v1781525845/5873186886602395569_g4avfl.jpg">
+<img src="https://res.cloudinary.com/dtdklgoij/image/upload/v1781525845/5873186886602395567_hkjosk.jpg">
+
+<img src="https://res.cloudinary.com/dtdklgoij/image/upload/v1781525845/5873186886602395568_kplfda.jpg">
+<img src="https://res.cloudinary.com/dtdklgoij/image/upload/v1781525845/5873186886602395569_g4avfl.jpg">
+<img src="https://res.cloudinary.com/dtdklgoij/image/upload/v1781525845/5873186886602395567_hkjosk.jpg">
+
+</div>
+</div>
+
+<div class="reveal">
+
+<a class="btn" href="https://www.tiktok.com/@miss.nibel77" target="_blank">
+<i class="fa-brands fa-tiktok"></i> TikTok
+</a>
+
+<a class="btn" href="https://www.facebook.com/share/1EZ4CJvDiE/" target="_blank">
+<i class="fa-brands fa-facebook"></i> Facebook
+</a>
+
+<a class="btn" href="mailto:nibelrezgui22@gmail.com">
+<i class="fa-solid fa-envelope"></i> Email
+</a>
+
+<a class="btn" href="tel:0542031012">
+<i class="fa-solid fa-phone"></i> Call Now
+</a>
+
+<a class="btn whatsapp" href="https://wa.me/213542031012" target="_blank">
+<i class="fa-brands fa-whatsapp"></i> WhatsApp
+</a>
+
+</div>
+
+<div class="reveal">
+<p class="footer">© 2026 Nibel Official - All Rights Reserved</p>
+</div>
+
+</div>
+
+<script>
+
+function reveal(){
+document.querySelectorAll('.reveal').forEach(el=>{
+const top = el.getBoundingClientRect().top;
+if(top < window.innerHeight - 80){
+el.classList.add('active');
+}
+});
+}
+
+window.addEventListener('scroll', reveal);
+window.addEventListener('load', reveal);
+
+</script>
+
+</body>
+</html>
